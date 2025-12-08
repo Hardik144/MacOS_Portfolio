@@ -85,7 +85,11 @@ const Welcome = () => {
       </h1>
 
       <div className="small-screen">
+<<<<<<< HEAD
         <p>This Portfolio is designed for desktop/tabletscreens only.</p>
+=======
+        <p>This Portfolio is designed for desktop/tablet screens only.</p>
+>>>>>>> refs/remotes/origin/feat/welcome
       </div>
     </section>
   );

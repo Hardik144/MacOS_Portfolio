@@ -10,10 +10,11 @@ const useLocationStore = create(
 
     setActiveLocation: (location) =>
       set((state) => {
+        if (location === undefined) return;
         state.activeLocation = location;
       }),
 
-    resetLocation: () =>
+    resetActiveLocation: () =>
       set((state) => {
         state.activeLocation = DEFAULT_LOCATION;
       }),

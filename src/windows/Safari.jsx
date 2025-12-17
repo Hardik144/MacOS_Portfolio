@@ -1,6 +1,7 @@
 import { WindowControls } from "#components";
-import { blogPosts } from "#constants";
+import { articles } from "#constants";
 import WindowWrapper from "#hoc/WindowWrapper";
+import useWindowStore from "#store/window";
 import {
   ChevronLeft,
   ChevronRight,
@@ -15,6 +16,12 @@ import {
 import React from "react";
 
 const Safari = () => {
+  const { openWindow } = useWindowStore();
+
+  const handleArticleClick = (article) => {
+    openWindow("article", article);
+  };
+
   return (
     <>
       <div id="window-header">
@@ -46,17 +53,17 @@ const Safari = () => {
       </div>
 
       <div className="blog">
-        <h2>My Developer Blog</h2>
+        <h2>Insights & Projects</h2>
         <div className="space-y-8">
-          {blogPosts.map(({ id, image, title, date, link }) => (
-            <div key={id} className="blog-post">
+          {articles.map((article) => (
+            <div key={article.id} className="blog-post cursor-pointer" onClick={() => handleArticleClick(article)}>
               <div className="col-span-2">
-                <img src={image} alt={title} />
+                <img src={article.image} alt={article.title} />
               </div>
               <div className="content">
-                <p>{date}</p>
-                <h3>{title}</h3>
-                <a href={link} target="_blank" rel="noopenernoreferrer">
+                <p>{article.date}</p>
+                <h3>{article.title}</h3>
+                <a href="#" onClick={(e) => e.preventDefault()}>
                   Check out the full post <MoveRight className="icon-hover" />
                 </a>
               </div>

@@ -74,30 +74,33 @@ const dockApps = [
   },
 ];
 
-const blogPosts = [
+const articles = [
   {
     id: 1,
-    date: "Sep 2, 2025",
-    title:
-      "TypeScript Explained: What It Is, Why It Matters, and How to Master It",
-    image: "/images/blog1.png",
-    link: "https://jsmastery.com/blog/typescript-explained-what-it-is-why-it-matters-and-how-to-master-it",
+    date: "Oct 2025",
+    title: "How I Built CropCare AI to Help Indian Farmers",
+    image: "/images/cropcare.png",
+    link: "/articles/cropcare-ai",
+    type: "Case Study",
   },
   {
     id: 2,
-    date: "Aug 28, 2025",
-    title: "The Ultimate Guide to Mastering Three.js for 3D Development",
-    image: "/images/blog2.png",
-    link: "https://jsmastery.com/blog/the-ultimate-guide-to-mastering-three-js-for-3d-development",
+    date: "Dec 2025",
+    title: "Designing a macOS-Style Portfolio Using React & GSAP",
+    image: "/images/portfolio.png",
+    link: "/articles/macos-portfolio",
+    type: "Learning Note",
   },
   {
     id: 3,
-    date: "Aug 15, 2025",
-    title: "The Ultimate Guide to Mastering GSAP Animations",
-    image: "/images/blog3.png",
-    link: "https://jsmastery.com/blog/the-ultimate-guide-to-mastering-gsap-animations",
+    date: "Nov 2025",
+    title: "Product Eco-Friendliness Index (PEFI): Measuring Sustainability Using ML",
+    image: "/images/pefi.png",
+    link: "/articles/pefi",
+    type: "Case Study",
   },
 ];
+
 
 const techStack = [
   {
@@ -208,7 +211,7 @@ export {
   navLinks,
   navIcons,
   dockApps,
-  blogPosts,
+  articles,
   techStack,
   socials,
   photosLinks,
@@ -501,6 +504,7 @@ const WINDOW_CONFIG = {
   terminal: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   txtfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   imgfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+  article: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
 };
 
 export { INITIAL_Z_INDEX, WINDOW_CONFIG };

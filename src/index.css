@@ -376,6 +376,135 @@ body {
     }
   }
 
+  #article {
+    @apply w-3xl absolute top-20 right-10 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+
+    #window-header {
+      h2 {
+        @apply font-bold text-sm text-center flex-1;
+      }
+    }
+
+    .article-content {
+      @apply bg-white max-h-[70vh] overflow-auto;
+
+      /* Hero image */
+      .article-hero {
+        @apply -mx-6 -mt-6 mb-6;
+
+        img {
+          @apply w-full h-auto object-cover rounded-t-lg;
+          max-height: 240px;
+        }
+      }
+
+      /* Metadata */
+      .article-meta {
+        @apply flex items-center gap-3 pb-4 border-b border-gray-100;
+
+        .article-date {
+          @apply text-xs text-gray-500 font-medium;
+        }
+
+        .article-type {
+          @apply text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded-full;
+        }
+      }
+
+      /* Typography */
+      p {
+        @apply text-gray-700 leading-7 text-sm mb-4;
+      }
+
+      .article-paragraph {
+        @apply text-gray-700 leading-7 text-sm mb-4;
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        @apply font-semibold mt-6 mb-3 text-gray-900;
+      }
+
+      h1 {
+        @apply text-2xl;
+      }
+
+      h2 {
+        @apply text-xl;
+      }
+
+      .article-section-heading {
+        @apply text-lg;
+      }
+
+      h3 {
+        @apply text-base;
+      }
+
+      /* Feature list with icons */
+      .feature-list {
+        @apply list-none pl-0 space-y-2 my-4;
+
+        .feature-item {
+          @apply flex items-center gap-3 text-sm text-gray-700;
+
+          .feature-icon {
+            @apply text-gray-400 flex-shrink-0;
+          }
+
+          span {
+            @apply leading-relaxed;
+          }
+        }
+      }
+
+      /* Tech stack pills */
+      .tech-stack-list {
+        @apply list-none pl-0 flex flex-wrap gap-2 my-4;
+
+        .tech-pill {
+          @apply inline-block bg-gray-100 text-gray-700 text-xs font-medium px-3 py-1.5 rounded-full;
+        }
+      }
+
+      /* Default list styling */
+      ul {
+        @apply list-disc list-inside space-y-1 my-3 text-sm text-gray-700;
+      }
+
+      li {
+        @apply mb-1;
+      }
+
+      /* Links */
+      a {
+        @apply text-blue-600 hover:text-blue-700 underline;
+      }
+
+      /* Code blocks */
+      code {
+        @apply bg-gray-100 text-gray-800 px-1.5 py-0.5 rounded text-xs font-mono;
+      }
+
+      pre {
+        @apply bg-gray-50 border border-gray-200 rounded-md p-3 overflow-x-auto my-4;
+
+        code {
+          @apply bg-transparent text-gray-800 p-0;
+        }
+      }
+
+      /* Blockquotes */
+      blockquote {
+        @apply border-l-4 border-gray-300 pl-4 my-4 text-gray-600 italic;
+      }
+
+      /* Horizontal rule */
+      hr {
+        @apply my-6 border-gray-200;
+      }
+    }
+  }
+
   #home {
     @apply relative z-0 max-sm:hidden;
 

@@ -28,7 +28,18 @@ const WindowWrapper = (Component, windowKey) => {
         if (!el) return;
 
         const [instance] = Draggable.create(el, {
-          onPress: () => {
+          onPress: function () {
+            try {
+              const evt = this.pointerEvent;
+              const target = evt && evt.target;
+              if (
+                target &&
+                typeof target.closest === "function" &&
+                target.closest("a,button,input,textarea,select,summary,label")
+              ) {
+                return;
+              }
+            } catch (e) {}
             focusWindow(windowKey);
           },
         });

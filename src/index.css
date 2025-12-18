@@ -237,25 +237,33 @@ body {
   }
 
   #photos {
-    @apply max-w-3xl absolute top-96 left-1/2 -translate-y-1/2 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+    @apply w-2xl absolute top-24 left-1/3 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+
+    #window-header {
+      h2 {
+        @apply font-bold text-sm text-center flex-1;
+      }
+    }
 
     .sidebar {
-      @apply w-3/12 flex-none bg-gray-50 border-r border-gray-200 flex flex-col p-5;
+      @apply w-40 flex-none bg-gray-50 border-r border-gray-200 flex flex-col p-4 max-h-[70vh] overflow-auto;
 
-      h2 {
-        @apply text-xs font-medium text-gray-400 mb-1;
+      h3 {
+        @apply text-xs font-medium text-gray-400 mb-4 uppercase;
       }
 
       ul {
-        li {
-          @apply flex space-y-1 items-center gap-2 px-3 py-2 rounded-md cursor-pointer transition-colors;
+        @apply space-y-1;
 
-          &:first-child {
+        li {
+          @apply flex items-center gap-3 px-3 py-2 rounded-md cursor-pointer transition-colors text-gray-700 hover:bg-gray-200;
+
+          &.active {
             @apply bg-blue-100 text-blue-700;
           }
 
           img {
-            @apply w-4;
+            @apply w-5 h-5;
           }
 
           p {
@@ -266,14 +274,14 @@ body {
     }
 
     .gallery {
-      @apply p-5;
+      @apply p-5 h-[70vh] overflow-hidden;
 
       ul {
-        @apply grid grid-cols-5 grid-rows-5 gap-2.5;
+        @apply grid grid-cols-5 grid-rows-5 gap-2.5 h-full overflow-y-auto pr-2;
 
         li {
           img {
-            @apply size-full object-cover rounded-lg;
+            @apply size-full object-cover rounded-lg border-2 border-gray-200;
           }
 
           &:first-child {

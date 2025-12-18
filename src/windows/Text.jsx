@@ -20,8 +20,8 @@ const Text = () => {
 
       <div className="p-6 bg-white max-w-2xl mx-auto space-y-4">
         { (image || imageUrl) && (
-          <div className="preview p-2 bg-gray-100 rounded-md">
-            <img src={image || imageUrl} alt={name} className="w-full h-auto object-contain" />
+          <div className="preview p-2 bg-gray-100 rounded-full w-30">
+            <img src={image || imageUrl} alt={name} className="w-30 h-auto object-contain rounded-full" />
           </div>
         ) }
 

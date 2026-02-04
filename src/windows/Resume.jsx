@@ -20,6 +20,7 @@ const Resume = () => {
           download
           className="cursor-pointer"
           title="Download resume"
+          onclick="gtag('event', 'resume_download');
         >
           <Download className="icon" />
         </a>

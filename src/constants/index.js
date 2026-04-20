@@ -105,15 +105,15 @@ const articles = [
 const techStack = [
   {
     category: "Languages",
-    items: ["JavaScript", "Python", "C++/C", "Java"],
+    items: ["JavaScript (ES6+)", "Python", "C++", "Java"],
   },
   {
     category: "Frontend",
-    items: ["React.js"],
+    items: ["React.js", "HTML5"],
   },
   {
     category: "Styling",
-    items: ["Tailwind CSS", "CSS"],
+    items: ["Tailwind CSS", "CSS3"],
   },
   {
     category: "Backend",
@@ -121,15 +121,23 @@ const techStack = [
   },
   {
     category: "Databases",
-    items: ["MongoDB", "MySQL/SQL"],
+    items: ["MongoDB", "MySQL"],
+  },
+  {
+    category: "Real-Time & APIs",
+    items: ["REST APIs", "WebSockets (Socket.io)", "JWT Authentication"],
+  },
+  {
+    category: "Testing & Tools",
+    items: ["Postman", "Jest"],
   },
   {
     category: "AI / ML",
-    items: ["Machine Learning", "Image Classification"],
+    items: ["Machine Learning", "Image Classification", "Model Training (Basics)"],
   },
   {
-    category: "Dev Tools",
-    items: ["Git", "GitHub", "Docker", "VS Code"],
+    category: "DevOps & Cloud",
+    items: ["Git", "GitHub", "Docker", "Kubernetes (Basics)", "AWS (Basics)", "CI/CD (Basics)", "VS Code"],
   },
 ];
 
@@ -201,7 +209,7 @@ const gallery = [
   },
   {
     id: 6,
-    img: "/images/me.png",
+    img: "/images/campus-crisis.png",
   },
 ];
 
@@ -230,7 +238,7 @@ const WORK_LOCATION = {
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-6 left-5",
-      windowPosition: "top-[2vh] right-10",
+      windowPosition: "top-[42vh] left-16",
       children: [
         {
           id: 1,
@@ -362,7 +370,7 @@ const WORK_LOCATION = {
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-7 right-1",
-      windowPosition: "top-[50vh] right-6",
+      windowPosition: "top-[57vh] left-12",
       children: [
         {
           id: 1,
@@ -396,6 +404,94 @@ const WORK_LOCATION = {
           fileType: "img",
           position: "top-52 right-96",
           imageUrl: "/images/gal4.png",
+        },
+      ],
+    },
+    //Project 5
+    {
+      id: 9,
+      name: "Campus Crisis Radar",
+      icon: "/images/folder.png",
+      kind: "folder",
+      position: "top-40 left-5",
+      windowPosition: "top-[10vh] left-10",
+      children: [
+        {
+          id: 1,
+          name: "Campus Crisis Radar.txt",
+          icon: "/images/txt.png",
+          kind: "file",
+          fileType: "txt",
+          position: "top-6 left-12",
+          description: [
+            "Campus Crisis Radar is a real-time emergency response and incident reporting web application designed for campus safety.",
+            "Users can report incidents, trigger panic alerts, and share live location data using GPS broadcasting.",
+            "The system uses WebSockets (Socket.io) for real-time updates and instant notifications across connected users.",
+            "Built with React, Node.js, Express, and MongoDB, with JWT-based authentication for secure access.",
+            "Includes features like image uploads via Cloudinary, OpenStreetMap integration, and live incident tracking dashboard.",
+          ],
+        },
+        {
+          id: 2,
+          name: "campus-crisis-radar.com",
+          icon: "/images/safari.png",
+          kind: "file",
+          fileType: "url",
+          href: "https://github.com/Hardik144/campus-crisis-radar",
+          position: "top-12 right-44",
+        },
+        {
+          id: 3,
+          name: "campus-crisis-radar.png",
+          icon: "/images/image.png",
+          kind: "file",
+          fileType: "img",
+          position: "top-52 right-96",
+          imageUrl: "/images/campus-crisis.png",
+        },
+      ],
+    },
+    //Project 6
+    {
+      id: 10,
+      name: "LexVault - Law Firm System",
+      icon: "/images/folder.png",
+      kind: "folder",
+      position: "top-40 right-10",
+      windowPosition: "top-[25vh] left-8",
+      children: [
+        {
+          id: 1,
+          name: "LexVault.txt",
+          icon: "/images/txt.png",
+          kind: "file",
+          fileType: "txt",
+          position: "top-6 left-12",
+          description: [
+            "LexVault is a full-stack law firm management system designed to streamline legal case handling and client management.",
+            "It enables lawyers to manage cases, clients, documents, and appointments in a centralized dashboard.",
+            "The system includes secure authentication, role-based access control, and document storage features.",
+            "Built using React for frontend and Node.js with Express for backend, integrated with MongoDB for data persistence.",
+            "DevOps practices include Docker containerization, Kubernetes deployment, and CI/CD pipeline integration for scalable deployment.",
+          ],
+        },
+        {
+          id: 2,
+          name: "lexvault-system.com",
+          icon: "/images/safari.png",
+          kind: "file",
+          fileType: "url",
+          href: "https://github.com/Hardik144/lexvault-law-firm-system",
+          position: "top-12 right-44",
+        },
+        {
+          id: 3,
+          name: "lexvault.png",
+          icon: "/images/image.png",
+          kind: "file",
+          fileType: "img",
+          position: "top-52 right-96",
+          imageUrl: "/images/lexvault.png",
         },
       ],
     },
